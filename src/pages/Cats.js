@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Container, Row, ListGroup} from 'react-bootstrap'
+import { Col, Container, Row, ListGroup } from 'react-bootstrap'
 
 export default class Cats extends Component {
   render() {

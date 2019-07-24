@@ -32,6 +32,10 @@ export default class App extends Component {
     }
   }
 
+  handleNewCat = (form) => {
+    console.log(form)
+  }
+
   render() {
     return (
       <div>
@@ -39,7 +43,7 @@ export default class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/cats' render={( props ) => <Cats cats={this.state.cats} /> } />
-            <Route exact path='/' Component={NewCat} />
+            <Route exact path='/' render={( props ) => <NewCat handleNewCat={this.handleNewCat}/> } />
           </Switch>
         </Router>
       </div>
