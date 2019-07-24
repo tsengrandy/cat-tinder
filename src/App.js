@@ -2,37 +2,37 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Header from './components/Header'
 
-import Cats from './pages/Cats'
-import NewCat from './pages/NewCat'
+import Friends from './pages/Friends'
+import NewFriend from './pages/NewFriend'
 
 export default class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      cats: [
+      friends: [
         {
           id: 1,
           name: 'Morris',
-          age: 2,
-          enjoys: 'Long walks on the beach'
+          age: 25,
+          enjoys: 'Wearing monocles'
         },
         {
           id: 2,
-          name: 'Paws',
-          age: 4,
-          enjoys: 'Snuggling by the fire'
+          name: 'Sir ThinksaLot',
+          age: 44,
+          enjoys: 'Reading by the fire'
         },
         {
           id: 3,
-          name: 'Mr. Meowsalot',
+          name: 'Fite Me IRL',
           age: 12,
-          enjoys: 'Being in charge'
+          enjoys: 'Speech and Debate'
         }
       ]
     }
   }
 
-  handleNewCat = (form) => {
+  handleNewFriend = (form) => {
     console.log(form)
   }
 
@@ -42,8 +42,8 @@ export default class App extends Component {
         <Header />
         <Router>
           <Switch>
-            <Route exact path='/cats' render={( props ) => <Cats cats={this.state.cats} /> } />
-            <Route exact path='/' render={( props ) => <NewCat handleNewCat={this.handleNewCat}/> } />
+            <Route exact path='/friends' render={( props ) => <Friends friends={this.state.friends} /> } />
+            <Route exact path='/' render={( props ) => <NewFriend handleNewFriend={this.handleNewFriend}/> } />
           </Switch>
         </Router>
       </div>

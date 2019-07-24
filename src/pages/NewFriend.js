@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form } from 'react-bootstrap'
 
-export default class NewCat extends Component {
+export default class NewFriend extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,7 +21,7 @@ export default class NewCat extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.handleNewCat(this.state.form)
+    this.props.handleNewFriend(this.state.form)
   }
 
   render() {
@@ -33,7 +33,7 @@ export default class NewCat extends Component {
           <Form.Control type='text' name='age' onChange={this.handleChange} value={this.state.form.age} />
           <label id='enjoys'>Enjoys</label>
           <Form.Control type='text' name='enjoys' onChange={this.handleChange} value={this.state.form.enjoys} />
-          <button id='submit' onClick={this.onSubmit}>Create Cat Profile</button>
+          <button id='submit' onClick={this.onSubmit}>Create Profile</button>
         </Form>
     )
   }
