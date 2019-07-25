@@ -6,7 +6,7 @@ export default class Header extends Component {
     return (
         <div>
           <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">Philosociety</Navbar.Brand>
+            <Navbar.Brand href="#home">Sophosciety</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
