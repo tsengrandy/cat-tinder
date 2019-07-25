@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Header from './components/Header'
+import { getFriends } from './api'
 
 import Friends from './pages/Friends'
 import NewFriend from './pages/NewFriend'
@@ -30,6 +31,15 @@ export default class App extends Component {
         }
       ]
     }
+  }
+
+  componentWillMount = () => {
+    getFriends()
+      .then(APIfriends => {
+        this.setState({
+          friends: APIfriends
+        })
+      })
   }
 
   handleNewFriend = (form) => {
